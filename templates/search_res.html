@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты поиска</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<body>
+
+<nav class="top-menu">
+  <ul class="menu-main">
+    <li><a href="{{ main_url }}">Главная</a></li>
+    <li><a href="{{ searsh_url }}">Поиск</a></li>
+  </ul>
+</nav>
+
+<div class="head_head">
+    <p class="head_line">Результаты поиска по параметрам:
+        <b>{{auth}}, {{date_min}}, {{date_max}}, {{size_min}}, {{size_max}},  {{verse}}</b></p>
+</div>
+
+{% for id,auth_,text,size,date,verse_ in clean %}
+<table>
+    <tr><td>
+        <b>Автор: </b>{{auth_}}<br>
+        <b>Количество строк: </b>{{size}}<br>
+        <b>Дата: </b>{{date}}<br>
+        <b>Стихотворный размер: </b>{{verse_}}
+    </td>
+    <td class="text_style">
+        <pre>{{text}}</pre>
+    </td></tr>
+</table>
+{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<body>
+<nav class="top-menu">
+  <ul class="menu-main">
+    <li><a href="{{ main_url }}">Главная</a></li>
+    <li><a href="{{ searsh_url }}">Поиск</a></li>
+  </ul>
+</nav>
+<form class="decor">
+  <div class="form-left-decoration"></div>
+  <div class="form-right-decoration"></div>
+  <div class="circle"></div>
+  <div class="form-inner">
+    <h3>Поиск по параметрам</h3>
+      <p>Автор</p>
+    <input name="auth" placeholder="Автор"
+                   value="None" autofocus autocomplete="off"/>
+      <p>Год "от"<Br>
+            <input type="number" name="date_min" placeholder="год от"
+                   value="0" autofocus autocomplete="off"/>
+        </p>
+    <p>Год "до"<Br>
+            <input name="date_max" placeholder="год до"
+                   value="2000" autofocus autocomplete="off"/>
+        </p>
+    <p>Размер "от"<Br>
+            <input name="size_min" placeholder="размер от"
+                      value="0" autofocus autocomplete="off"/>
+        </p>
+    <p>Размер "от"<Br>
+            <input name="size_max" placeholder="размер до"
+                   value="100" autofocus autocomplete="off"/>
+        </p>
+    <p>Стихотворный размер<Br>
+            <input id="inputSuccess" name="verse" placeholder="стихотворный размер"
+                   value="None" autofocus autocomplete="off"/>
+        </p>
+    <input type="submit" value="Отправить">
+  </div>
+</form>
+</body>
+</html>
